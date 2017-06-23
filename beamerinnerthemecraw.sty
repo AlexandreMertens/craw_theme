@@ -1,0 +1,36 @@
+\mode<presentation>
+
+% Title page
+\defbeamertemplate*{title page}{craw}[1][]
+{ 
+    %\vskip1cm%
+	  \begin{beamercolorbox}[wd=0.6\paperwidth,#1]{institute}
+		  \flushleft
+			\includegraphics[width=0.5\textwidth]{craw_fr.png} \\
+			\vspace{-15pt}
+			\hspace{0.40cm} \textbf{Centre wallon de Recherches} \\
+			\hspace{0.40cm} \textbf{agronomiques}
+	  \end{beamercolorbox}
+	  \vskip1.25cm%
+    \begin{beamercolorbox}[wd=12cm,leftskip=1.20cm,#1]{title page header}
+		\usebeamerfont{title}\inserttitle\par%
+		\end{beamercolorbox}%
+		\vskip0.25cm%
+		\begin{beamercolorbox}[wd=12cm,leftskip=1.20cm,#1]{subtitle page header}
+		\usebeamerfont{subtitle}\insertsubtitle\par%
+		\end{beamercolorbox}%
+    \vskip0.75cm%
+    \begin{beamercolorbox}[wd=\textwidth,#1]{author}
+		  \centering
+      \usebeamerfont{author}\insertauthor%
+    \end{beamercolorbox}
+     \vskip0.2cm%
+    \begin{beamercolorbox}[wd=\textwidth,#1]{date}
+		  \centering
+      \usebeamerfont{author}\insertdate%
+    \end{beamercolorbox}
+  \vfill
+}
+
+\mode
+<all>

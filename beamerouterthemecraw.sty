@@ -1,0 +1,43 @@
+\mode<presentation>
+
+% Frame title
+\defbeamertemplate*{frametitle}{craw}[1][]
+{
+  \begin{beamercolorbox}[wd=\paperwidth,ht=1.2cm]{frametitle} 
+	\hspace{15pt} \usebeamerfont{frametitle} \insertframetitle
+  \end{beamercolorbox}
+}
+
+% Footline
+\defbeamertemplate*{footline}{craw}[1][]
+{
+    % no footlines for first page
+	\ifnum \insertpagenumber>1
+			\vspace*{-\paperheight}
+			%\leavevmode 
+			\begin{beamercolorbox}[wd=\paperwidth, ht=0.12\paperheight]{footline}
+				\begin{minipage}[b]{0.25\textwidth}
+						\centering
+						\includegraphics[height=0.12\paperheight]{craw_fr.png}%
+				\end{minipage}%
+				\begin{minipage}[b]{0.70\textwidth}
+						\flushleft%
+						\color{crawgreen}{Walloon Agricultural Research Centre}\\
+						\color{black}{To address today's questions and to prepare tomorrow's challenges}\\
+						\color{crawred}{\href{www.cra.wallonie.be}{www.cra.wallonie.be}} \\
+						\vspace*{0.02\paperheight}
+				\end{minipage}%
+				\begin{minipage}[b]{0.05\textwidth}
+				    %\hfill%
+        			\usebeamercolor[fg]{page number in head/foot}%
+        			\usebeamerfont{page number in head/foot}%
+       				\large{\insertframenumber}%
+       				\vspace*{0.02\paperheight}
+       			\end{minipage}
+				
+			\end{beamercolorbox}
+	\fi
+}
+
+
+\mode<all>
